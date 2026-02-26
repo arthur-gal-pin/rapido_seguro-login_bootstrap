@@ -5,30 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=], initial-scale=1.0">
     <title>Rapido e seguro logística</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
+        defer></script>
 </head>
 
-<body>
+<body class=" d-flex flex-column min-vh-100">
 
-    <main class="container col-12 d-flex justify-content-center">
-        <form class="d-flex border-opacity-75 border-3 rounded p-4 flex-column col-5 bg-opacity-25 bg-dark" action="" method="post" class="container">
-            <h5 class="mb-4">
-                Rápido e Seguro Logistíca - Login
-            </h5>
+    <header class="w-100 h-25 bg-warning d-flex justify-content-center p-3">
+        <h1>Rápido e Seguro Logística</h1>
+    </header>
 
-            <label class="" for="campo-email">Email</label>
-            <input class="form-control form-control-sm mb-4" type="email" name="email" id="campo-email" required>
-            
-            <label class="label-primary" for="campo-senha">Senha</label>
-            <input class="form-control form-control-sm" type="password" name="senha" id="campo-senha" required>
+    <main class="container min-vh-100 d-flex flex-column">
+        <div class="row flex-grow-1 justify-content-center align-items-center h-100">
 
-        </form>
+            <form class="d-flex border-opacity-50 border-3 rounded justify-content-around p-4 flex-column col-4"
+                style="height: 50vh;" action="" method="post" class="container">
+                <h3 class="position-relative mt"> <span class="text-primary">Rápido e Seguro </span> <span
+                        class="text-warning"> Logística </span> <br><br> Login</h3>
+                <div class="d-flex flex-column w-100 align-items-center">
+                    <div class="w-100">
+                        <input class="mb-4 p-2 bg-transparent align w-100" type="email" name="email" id="campo-email" required>
+                        <label class="" for="campo-email">Email</label>
+                    </div>
+
+                    <div class="w-100">
+                        <input class="p-2 bg-transparent w-100" type="password" name="senha" id="campo-senha" required>
+                        <label class="" for="campo-senha">Senha</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn align-self-center btn-warning col-3">
+                    Entrar
+                </button>
+            </form>
+
+        </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <footer class="100 p-3 bg-warning d-flex justify-content-center">
+        <p class="fs-4">&copy; Todos os direitos reservados, Rápido e seguro logística, 2026
+        </p>
+    </footer>
 </body>
 
 </html>

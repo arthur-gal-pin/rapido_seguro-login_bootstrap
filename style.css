@@ -1,3 +1,45 @@
 body {
-    /* background-color: blue; */
+    background-image: url('./assets/logistica-1024x576.jpg');
+    backdrop-filter: blur(5px);
+    color: rgb(37, 37, 37) !important;
+}
+
+form {
+    background-color: rgba(124, 124, 124, 0.548) !important;
+}
+
+form div {
+    position: relative;
+}
+
+input {
+    border: 2px solid rgb(68, 68, 68);
+    outline: rgb(163, 122, 0);
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+label {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    color: rgb(32, 32, 32);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border: 2px solid rgb(255, 191, 0);
+}
+
+input:focus + label {
+    top: -22px;
+    font-size: 14px;
+    color: #0066ff;
+}
+
+input:valid + label {
+    top: -22px;
+    font-size: 14px;
+    color: #0d6efd;
 }
