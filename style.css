@@ -33,13 +33,13 @@ input:focus {
     border: 2px solid rgb(255, 191, 0);
 }
 
-input:focus + label {
+input:focus ~ label {
     top: 0px;
     font-size: 0.85rem;
     color: #0066ff;
 }
 
-input:valid + label {
+input:valid ~ label {
     top: 0px;
     font-size: 0.85rem;
     color: #0d6efd;
