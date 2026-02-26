@@ -26,7 +26,7 @@ label {
     top: 18px;
     color: rgb(32, 32, 32);
     pointer-events: none;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 input:focus {
@@ -43,4 +43,17 @@ input:valid + label {
     top: 0px;
     font-size: 0.85rem;
     color: #0d6efd;
+}
+
+@media (max-width: 576px) {
+    form {
+        width: 75% !important;
+    }
+    input {
+        margin-bottom: 7% !important;
+    }
+    #buttons {
+        display: flex;
+        flex-direction: column;
+    }
 }
