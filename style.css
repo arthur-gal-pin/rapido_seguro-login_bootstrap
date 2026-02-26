@@ -1,53 +1,145 @@
+/* Importação da fonte Oswald do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+/* Reset básico: remove margens e espaçamentos padrão de todos os elementos */
 * {
     padding: 0;
     margin: 0;
 }
 
-/* Ajuste do Logo */
+/* Ajuste do tamanho mínimo da logo */
 #logo {
-    min-width: 10% !important; 
-    min-height: 10% !important;
+    min-width: 10% !important;   /* Define largura mínima */
+    min-height: 10% !important;  /* Define altura mínima */
 }
 
-/* Tipografia e Cores */
+/* ============================= */
+/* ESTILIZAÇÃO GERAL DA PÁGINA */
+/* ============================= */
+
 body {
-    background-color: #f8f9fa;
-    font-size: 60% !important;
+    background-color: #f8f9fa; /* Cor de fundo padrão (caso imagem não carregue) */
+    font-size: 16px !important; /* Define tamanho base da fonte */
+    
+    /* Imagem de fundo */
+    background-image: url('./assets/logistica-1024x576.jpg');
+    background-size: contain; /* Ajusta imagem mantendo proporção */
+    
+    backdrop-filter: blur(5px); /* Aplica efeito de desfoque no fundo */
+    
+    color: rgb(37, 37, 37) !important; /* Cor padrão do texto */
 }
 
+/* Cor de fundo do cabeçalho */
 header {
     background-color: #ffffff;
 }
 
+/* Estilização do título principal */
 body div h1 {
-    font-size: 2.5em !important;
+    font-size: 1.2rem !important;
     font-family: 'Oswald' !important;
-
 }
 
-/* Rodapé mais elegante */
-footer {
-    padding: 2rem 0;
-    background-color: #212529;
-    color: white;
-    text-align: center;
-    margin-top: 3rem;
+/* ============================= */
+/* FORMULÁRIO */
+/* ============================= */
+
+form {
+    background-color: rgba(255, 255, 255) !important; /* Fundo branco */
 }
 
-footer h5 {
+/* Torna os elementos internos referência para posicionamento absoluto do label */
+form div {
+    position: relative;
+}
+
+/* Estilização padrão dos inputs */
+input {
+    border: 2px solid rgb(68, 68, 68); /* Borda cinza */
+    outline: rgb(163, 122, 0); /* Cor do contorno ao focar (nem sempre visível) */
+    border-radius: 10px; /* Cantos arredondados */
+    font-size: 1rem;
+}
+
+/* Estilização dos labels (efeito flutuante) */
+label {
+    position: absolute; /* Posicionamento sobre o input */
+    left: 8px;
+    top: 18px;
+    color: rgb(32, 32, 32);
+    pointer-events: none; /* Impede clique direto no label */
+    transition: 0.2s; /* Animação suave */
     font-size: 0.9rem;
-    font-weight: 300;
 }
 
-@media only screen and (min-width: 768px){
-    body div h1{
+/* Quando o input recebe foco */
+input:focus {
+    border: 2px solid rgb(255, 191, 0); /* Borda amarela */
+}
+
+/* Move o label quando o input está focado */
+input:focus ~ label {
+    top: 0px;
+    font-size: 0.85rem;
+    color: #0066ff;
+}
+
+/* Move o label quando o campo é válido (já preenchido) */
+input:valid ~ label {
+    top: 0px;
+    font-size: 0.85rem;
+    color: #0d6efd;
+}
+
+/* ============================= */
+/* RODAPÉ */
+/* ============================= */
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+/* Para telas médias ou maiores (tablets e desktops) */
+@media only screen and (min-width: 768px) {
+    
+    /* Aumenta tamanho do título */
+    body div h1 {
         font-size: 3.5em !important;
         font-family: 'Oswald' !important;
     }
-    #logo{
+
+    /* Ajusta tamanho máximo da logo */
+    #logo {
         height: auto !important;
         max-width: 20% !important;
+    }
+}
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 576px) {
+    
+    /* Ajusta largura do formulário */
+    form {
+        width: 75% !important;
+    }
+
+    /* Aumenta espaçamento inferior dos inputs */
+    input {
+        margin-bottom: 7% !important;
+    }
+
+    /* Organiza botões em coluna */
+    #buttons {
+        display: flex;
+        flex-direction: column;
     }
 }
