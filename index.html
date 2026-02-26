@@ -13,33 +13,38 @@
         defer></script>
 </head>
 
-<body class=" d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100">
 
     <header class="w-100 h-25 bg-warning d-flex justify-content-center p-3">
         <h1>Rápido e Seguro Logística</h1>
     </header>
 
     <main class="container min-vh-100 d-flex flex-column">
-        <div class="row flex-grow-1 justify-content-center align-items-center h-100">
+        <div class="row flex-grow-1 justify-content-center align-items-center">
 
-            <form class="d-flex border-opacity-50 border-3 rounded justify-content-around p-4 flex-column col-4"
+            <form class="d-flex h-100 border-opacity-50 border-3 rounded justify-content-around p-4 flex-column col-sm-6 col-md-4 col-lg-4"
                 style="height: 50vh;" action="" method="post" class="container">
                 <h3 class="position-relative mt"> <span class="text-primary">Rápido e Seguro </span> <span
                         class="text-warning"> Logística </span> <br><br> Login</h3>
                 <div class="d-flex flex-column w-100 align-items-center">
                     <div class="w-100">
-                        <input class="mb-4 p-2 bg-transparent align w-100" type="email" name="email" id="campo-email" required>
-                        <label class="" for="campo-email">Email</label>
+                        <input class="mb-sm-3 mb-md-4 p-3 bg-transparent align w-100" type="email" name="email"
+                            id="campo-email" required>
+                        <label class="" for="campo-email">Digite seu email</label>
                     </div>
 
                     <div class="w-100">
-                        <input class="p-2 bg-transparent w-100" type="password" name="senha" id="campo-senha" required>
-                        <label class="" for="campo-senha">Senha</label>
+                        <input class="mb-sm-3 mb-md-4 p-3 bg-transparent w-100" type="password" name="senha"
+                            id="campo-senha" required>
+                        <label class="" for="campo-senha">Digite sua senha</label>
                     </div>
                 </div>
-                <button type="submit" class="btn align-self-center btn-warning col-3">
-                    Entrar
-                </button>
+                <div class="flex-sm-column flex-md-row d-flex justify-content-center gap-2">
+                    <button type="submit" class="btn align-self-center btn-warning">
+                        Entrar
+                    </button>
+                    <button class="bg-transparent border-0 text-decoration-underline link-primary">Esqueci minha senha</button>
+                </div>
             </form>
 
         </div>
